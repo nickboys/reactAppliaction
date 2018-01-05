@@ -2,16 +2,12 @@
  * Created by JianHuangsh on 2017/12/22.
  */
 
-export  function addCount() {
+export function addCount() {
     return {type: 'INCREMENT'};
 }
 
-// export const increment = (state) => ({
-//     type: 'INCREMENT',
-//     state
-// })
-//
-// export const decrement = () => ({
-//     type: 'INCREMENT',
-//     state
-// })
+export function paly(song) {
+    return {type: 'PLAY', song}
+
+}
+

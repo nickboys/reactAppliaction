@@ -4,6 +4,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {addCount} from '../../actions/index'
+import store from '../../store/index'
 import 'antd/dist/antd.css';
 import './home.css'
 import  r1 from  './imgs/2.jpg'
@@ -61,7 +62,7 @@ class Home extends Component {
                                 <input type="text" onClick={this.addCount} placeholder="填入试试下面得字会变"/>
                             </div>
                             <div>
-                                <h1 message={count} type="success"/>
+                                <input value={count} type="success"/>
                             </div>
                         </div>
                     </Content>
@@ -74,8 +75,9 @@ class Home extends Component {
     }
 
     addCount() {
-        let {dispatch, count} = this.props;
-        dispatch(addCount());
+     //   let {dispatch, count} = this.props;
+        //dispatch(addCount());
+        store.dispatch(addCount())
     }
 }
 
